@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPTecher's Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<div id="cima">
+    <h3>Bem vindo a aventura!</h3>
+</div>
+
+<body>
+    <center>
+    <div class="conteiner">
+        <h1>Aureole's Hexadecimal Machine</h1>
+        <img id="fern-img" src="imagens/fern-pixel-art.png" alt="">
+        <div id="fala_fern"></div>
+
+        <h4>Pergunte enquanto pode pagar </h4>
+        <input id="demo1" type="text" placeholder="Ex: 42">
+        <br><br>
+
+        <button onclick="converter()">Converter</button>
+        <div class="result">
+            <h3>Resultados:</h3>
+            <p>Octal:
+            <div id="demo2"></div>
+            </p>
+            <p>Decimal:
+            <div id="demo3"></div>
+            </p>
+            <p>Binário:
+            <div id="demo4"></div>
+            </p>
+        </div>
+    </div>
+    <div id="link">
+        <a href="octal.html">Faça a transformação a partir do Octal com o Stark</a><br>
+        <a href="decimal.html">Faça a transformação a partir do Decimal com a Frieren</a>
+    </div>
+</center>
+
+    <script>
+        let din = 200;
+        function converter() {
+            var conv = Number(demo1.value);
+            var decimal = parseInt(conv, 16);
+
+            demo2.innerHTML = decimal.toString(8);
+            demo3.innerHTML = decimal;
+            demo4.innerHTML = decimal.toString(2);
+
+            din -= 10
+            if (din < 10 && din >= 0) {
+                fala_fern.innerHTML = "Você não tem dinheiro suficiente para usar a máquina!";
+            } else if (din < 0) {
+                fala_fern.innerHTML = "Pare imediatamente!";
+            } else {
+                fala_fern.innerHTML = "Você pagou 10 moedas, ainda tem " + din + " moedas.";
+            };
+        };
+    </script>
+</body>
+
+</html>

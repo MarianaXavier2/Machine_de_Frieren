@@ -1,0 +1,20 @@
+html {
+    background-image: url('imagens/cenario_Frieren.png');
+    background-color: #e6cbff;
+    background-size: cover; /* Cobre toda a tela */    
+}
+
+body {
+    background-color: #ffffffcc; /* Fundo branco com opacidade */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px #00000033; /* Sombra para dar profundidade */
+
+}
+
+a{
+    color: black;
+}
+
+h4, h3, p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
